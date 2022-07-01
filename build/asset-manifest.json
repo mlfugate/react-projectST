@@ -1,0 +1,16 @@
+{
+  "files": {
+    "main.css": "/static/css/main.eeff726a.css",
+    "main.js": "/static/js/main.be41c4b1.js",
+    "static/media/hero-banner2.jpg": "/static/media/hero-banner2.6991fffc7b1f9f4ec5ab.jpg",
+    "static/media/paper-bg.webp": "/static/media/paper-bg.87a9e38709bcca7fe983.webp",
+    "static/media/hero-mobile.jpg": "/static/media/hero-mobile.a314d8f2992417199f43.jpg",
+    "index.html": "/index.html",
+    "main.eeff726a.css.map": "/static/css/main.eeff726a.css.map",
+    "main.be41c4b1.js.map": "/static/js/main.be41c4b1.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.eeff726a.css",
+    "static/js/main.be41c4b1.js"
+  ]
+}
