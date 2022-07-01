@@ -1,17 +1,89 @@
-import React from 'react';
-import ReactDOM from 'react-dom/client';
-import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
-root.render(
-  <React.StrictMode>
+import React, { useState, useEffect } from 'react';
+import ReactDOM from 'react-dom';
+// import {createRoot} from 'react-dom/client';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+// import {Routes, Router, Route} from 'react-router-dom';
+import './styles.css';
+
+import {
+  Signin,
+  GetPosts,
+  AddPost,
+  UserProfile,
+  MessageList,
+  Navbar,
+} from './components';
+
+const App =  () => {
+  const [token, setToken] = useState('');
+  const [user, setUser] = useState({});
+  const [posts, setPosts] = useState([]);
+  const [messages, setMessages] = useState([])
+
+  useEffect( () => {
+    setToken(localStorage.getItem('token'))
+    if (token) {
+      const getToken = async() => {
+        const response = await fetch('https://strangers-things.herokuapp.com/api/2010-CPU-RM-WEB-PT/users/me', { 
+          method: "GET",
+          headers: {
+              'Content-Type': 'application/json',
+              'Authorization': `Bearer ${token}`
+          }
+      })
+      const data = await response.json();
+      setUser(data.data)
+      }
+      getToken()
+    }
+  },[token])
+
+  
+  return <>
+    <Navbar token={token} setToken={setToken} messages={messages} setMessages={setMessages} user={user}  setUser={setUser} />
+ 
+        <Route exact path="/">
+          <GetPosts setPosts={setPosts} posts={posts} token={token} setToken={setToken}/>
+        </Route>
+
+        <Route path="/register">
+          <Signin type={'register'} setToken={setToken} token={token} setUser={setUser}/>
+          </Route>
+
+
+        <Route path="/login">
+            <Signin type={'login'} setToken={setToken} setUser={setUser}/>
+        </Route>
+
+
+        <Route path="/addposts">
+            <AddPost setPosts={setPosts} token={token} posts={posts} user={user} setUser={user}/>
+        </Route>
+
+
+        <Route path="/users/me">
+            <UserProfile user={user} setUser={setUser} setPosts={setPosts} token={token} posts={posts} messages={messages} setMessages={setMessages}/>
+        </Route>
+
+        <Route path="/messages">
+          <MessageList token={token} setUser={setUser} user={user} messages={messages} setMessages={setMessages}/>
+        </Route>
+    
+  </>
+}
+
+ReactDOM.render(
+  <Router>
     <App />
-  </React.StrictMode>
+  </Router>,
+  document.getElementById('app'),
 );
 
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();
+// ReactDOM.render(
+//     <React.StrictMode>
+//       <App />
+//     </React.StrictMode>,
+//     document.getElementById('root')
+//   );
+
