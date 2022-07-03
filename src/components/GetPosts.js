@@ -28,7 +28,8 @@ const GetPosts = ({token, setToken, setUser}) => {
         }, []);
 
           return <>
-                <div className="post-wrapper">
+                <div className="post-bg">
+                    <div className='post-wrapper'>
             {
             postList.map(post => {
                 const {title, price, location, description,  _id, author, isAuthor, willDeliver} = post;
@@ -53,6 +54,7 @@ const GetPosts = ({token, setToken, setUser}) => {
                 )
             })
         }
+        </div>
         </div>
     </>
 }

@@ -54,6 +54,7 @@ const Signin = ({type, setToken, setUser}) => {
 }
   return <>
     <div id="loginHere" className="login-container">
+
       <h2 className="login-title">{title}</h2>
       <div className='form-wrapper'>
         <form onSubmit={handleSubmit} className="signin-form">

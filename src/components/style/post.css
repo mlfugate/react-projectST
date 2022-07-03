@@ -1,10 +1,8 @@
-.post-wrapper {
+.post-bg {
     width: 100%;
     display: flex;
-    flex-wrap: wrap;
-    gap: 2.5rem;
-    padding: 2.5rem 0 ;
     justify-content: center;
+    align-items: center;
     background-image: url('paper-bg.webp');
     background-size: cover;
     background-repeat: no-repeat;
@@ -14,6 +12,16 @@
     height: 100%;
     position: relative;
     
+}
+
+.post-wrapper {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+
+    flex-wrap: wrap;
+    gap: 2.5rem;
+    padding: 2.5rem 0 ;
 }
 
 .post-container {

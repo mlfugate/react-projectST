@@ -13,7 +13,8 @@ const Navbar = ({token, setToken, user, setUser}) => {
       }
     return <>
     <div className='nav-container'>
-        <div id="link-title">Strangers Things {user.username && <div className="logged-in">Hello {user.username.toUpperCase()}</div> }</div>
+        <div id="link-title">Strangers Things {user.username && <div className="logged-in">Welcome {user.username.toUpperCase()}</div> }<div>The Resale Site for Everything</div></div>
+        
         {/* {user.username && <div className="logged-in">Hello {user.username.toUpperCase()}</div> } */}
     {
         <nav className="nav-bar">

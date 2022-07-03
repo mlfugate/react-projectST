@@ -22,8 +22,9 @@ const UserProfile = ({token, setUser}) => {
     }, [token]);
 
       return <>
-      <div className="your-posts">Your Posts</div>
-    <div className="post-wrapper">
+      <div className='post-bg'>
+        <div className="your-posts">Your Posts</div>
+        <div className="post-wrapper">
         {
         postList.map((post, idx) => {
             const {title, price, location, description, _id,  author} = post;
@@ -40,6 +41,7 @@ const UserProfile = ({token, setUser}) => {
             })
         }
         </div>
+    </div>
     </>
 }
 

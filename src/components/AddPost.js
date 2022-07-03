@@ -42,15 +42,19 @@ const AddPost = ({token}) => {
         addPost()
     };
     return <>
-        <div className="add-post-container">
-        <h3 className="add-post-title">Create your new post!</h3>
-            <form onSubmit={handleSubmit} className="add-post-form">
-                <input type="text" value={title} onChange={(e) => setTitle(e.target.value)}placeholder="title"></input>
-                <textarea type="text" className="description" value={description} onChange={(e) => setDescription(e.target.value)}placeholder="description"></textarea>
-                <input type="text" value={price} onChange={(e) => setPrice(e.target.value)}placeholder="price"></input>
-                <input type="text" value={location} onChange={(e) => setLocation(e.target.value)}placeholder="location"></input>
-                <button type="submit" className="button">Submit</button>
-            </form>
+        <div className='post-bg'>
+            <div className="add-post-container">
+                <div className='form-wrapper'>
+                    <h3 className="add-post-title">Create your new post!</h3>
+                    <form onSubmit={handleSubmit} className="add-post-form">
+                        <input type="text" value={title} onChange={(e) => setTitle(e.target.value)}placeholder="title"></input>
+                        <textarea type="text" className="description" value={description} onChange={(e) => setDescription(e.target.value)}placeholder="description"></textarea>
+                        <input type="text" value={price} onChange={(e) => setPrice(e.target.value)}placeholder="price"></input>
+                        <input type="text" value={location} onChange={(e) => setLocation(e.target.value)}placeholder="location"></input>
+                        <button type="submit" className="button">Submit</button>
+                    </form>
+                </div>
+            </div>
         </div>
     </>
 
