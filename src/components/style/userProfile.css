@@ -1,6 +1,11 @@
 .your-posts {
     text-align: center;
-    padding: 10px;
-    font-family: 'Limelight', cursive;
-    font-size: 25px;
+    font-size: 3rem;
+    margin-top: 2.5rem;
+}
+
+
+
+.yourPost > .post-title {
+    padding: .5rem 0;
 }

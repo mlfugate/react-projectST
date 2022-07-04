@@ -56,7 +56,7 @@ const Signin = ({type, setToken, setUser}) => {
     <div id="loginHere" className="login-container">
 
       <h2 className="login-title">{title}</h2>
-      <div className='form-wrapper'>
+      <div className='login-wrapper'>
         <form onSubmit={handleSubmit} className="signin-form">
           <input type="text"  value={username} onChange={(event) => setUsername(event.target.value)}placeholder="username"></input>
           <input type="password" value={password} onChange={(event) => setPassword(event.target.value)}placeholder="password"></input>

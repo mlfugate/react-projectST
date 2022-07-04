@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { DeletePost, MessageForm } from './index';
 import './style/post.css'
+import './style/product-300.jpg'
 
 const GetPosts = ({token, setToken, setUser}) => {
     const [postList, setPosts] = useState([])
@@ -29,6 +30,7 @@ const GetPosts = ({token, setToken, setUser}) => {
 
           return <>
                 <div className="post-bg">
+                    <h1>Goodies</h1>
                     <div className='post-wrapper'>
             {
             postList.map(post => {
@@ -36,12 +38,14 @@ const GetPosts = ({token, setToken, setUser}) => {
                 return  (
                     <div className="post-container" key={_id}>
                     <div className="post">
+                        <img src={require('./style/product-300.jpg')}/>
                             <h1 className="post-title"><b>{title}</b></h1>
                             <div className="post-description"><b>Description:</b>  {description}</div>
                             <div className="price"><b>Price:</b>  {price}</div>
                             <div className="location"><b>Location:</b>  {location}</div>
                             <div className="will-deliver"><b>Will Deliver?</b> {willDeliver === true? 'Yes' : 'No'}</div>
                             <div className="seller"><b>Seller:</b>  {author.username}</div> 
+                </div>
                 {
                     isAuthor ?< DeletePost token={token} postList={postList} setPosts={setPosts} postId={_id}/> : ''
                 } 
@@ -49,7 +53,6 @@ const GetPosts = ({token, setToken, setUser}) => {
                     token && !isAuthor ? 
                     <MessageForm token={token} setUser={setUser} postId={_id} setPosts={setPosts}/> : ''
                 }
-                </div>
                 </div>
                 )
             })

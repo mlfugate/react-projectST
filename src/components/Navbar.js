@@ -13,11 +13,13 @@ const Navbar = ({token, setToken, user, setUser}) => {
       }
     return <>
     <div className='nav-container'>
-        <div id="link-title">Strangers Things {user.username && <div className="logged-in">Welcome {user.username.toUpperCase()}</div> }<div>The Resale Site for Everything</div></div>
+    
+        {/* <div id="link-title">Strangers Things {user.username && <div className="logged-in">Welcome {user.username.toUpperCase()}</div> }<div>The Resale Site for Everything</div></div> */}
         
         {/* {user.username && <div className="logged-in">Hello {user.username.toUpperCase()}</div> } */}
     {
         <nav className="nav-bar">
+            <div id="link-title">{user.username && <div className="logged-in">Welcome {user.username.toUpperCase()}</div> }</div>
         <div className="link-container">
         <Link to="users/me" className="links">{token ? 'User Profile' : ''}</Link> 
         <Link to="/messages" className="links">{token ? 'Messages' : ''}</Link>

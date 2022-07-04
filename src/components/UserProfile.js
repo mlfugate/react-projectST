@@ -29,7 +29,9 @@ const UserProfile = ({token, setUser}) => {
         postList.map((post, idx) => {
             const {title, price, location, description, _id,  author} = post;
             return  <div className="post-container" key={idx}>
-                  <div className="post">
+                  <div className="post yourPost">
+                  <img src={require('./style/product-300.jpg')}/>
+
                     <div className="post-title"><strong>{title}</strong></div>
                     <div className="post-description"><strong>Description:</strong>  {description}</div>
                     <div className="price"><strong>Price:</strong>  {price}</div>

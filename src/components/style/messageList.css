@@ -3,11 +3,11 @@
 .message-list-container {
     width: 100%;
     display: flex;
-    background-image: url('paper-bg.webp');
+    /* background-image: url('paper-bg.webp');
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
-    background-position: 75% 25%;
+    background-position: 75% 25%; */
     width: 100%; 
     height: 100%;
     position: relative;
@@ -19,6 +19,10 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+}
+
+.inbox h2, .outbox h2 {
+    letter-spacing: 1px;
 }
 
 .message-list {
@@ -37,6 +41,7 @@
     overflow: hidden;
     transition: transform .5s ease;
     border-radius: 5px;
+    letter-spacing: 1px;
 }
 
 
