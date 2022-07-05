@@ -20,7 +20,6 @@
   overflow: hidden;
   transition: transform .5s ease;
   border-radius: 5px;
-  /* font-family: 'Fredoka One', cursive; */
   letter-spacing: 1px;
 }
 
@@ -35,6 +34,8 @@
 .add-post-title {
   font-size: 2rem;
   letter-spacing: 2px;
+  width: 100%;
+  text-align: center;
 }
 
 form >  * {
@@ -42,20 +43,26 @@ form >  * {
   border-bottom: 1px solid rgba(0, 0, 0, 0.5);
   font-size: 1.25rem;
   padding-top: 1rem;
-  /* font-family: 'Fredoka One', cursive; */
+  font-family: "Helvetica Neue", sans-serif;
   vertical-align: middle;
 }
 
 form > button.form {
-  border-radius: 5px;
   padding: .5rem 2rem; 
   margin-top: 3rem;
   font-size: 1.5rem;
-  border: 1px solid black;
-  background-color: transparent;
+  border: none;
+  background-color: rgb(138, 154, 91);
+  color: white;
   transition: 0.65ms;
   width: 50%;
   align-self: center;
+}
+
+button.form:hover {
+  background-color: white;
+  border: 1px solid rgb(138, 154, 91);
+  color: rgb(138, 154, 91);
 }
 
 @media (max-width: 600px) {

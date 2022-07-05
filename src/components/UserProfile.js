@@ -24,6 +24,7 @@ const UserProfile = ({token, setUser}) => {
       return <>
       <div className='post-bg'>
         <div className="your-posts">Your Posts</div>
+        <hr></hr>
         <div className="post-wrapper">
         {
         postList.map((post, idx) => {

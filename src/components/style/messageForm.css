@@ -5,17 +5,15 @@
 }
 
 .message-form-input {
-
   font-size: 1rem;
   padding: .75rem;
 }
 
 .btn-message {
-  /* border-radius: 25px; */
   padding: .5rem 1.5rem; 
   margin-top: 1rem;
   font-size: 1rem;
-  /* border: 1px solid black; */
+  border: none;
   background-color: rgb(138, 154, 91);
   color: white;
  
@@ -24,4 +22,4 @@
 .btn-message:hover {
 
 }
-    
+  

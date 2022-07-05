@@ -19,8 +19,8 @@ const Navbar = ({token, setToken, user, setUser}) => {
         {/* {user.username && <div className="logged-in">Hello {user.username.toUpperCase()}</div> } */}
     {
         <nav className="nav-bar">
-            <div id="link-title">{user.username && <div className="logged-in">Welcome {user.username.toUpperCase()}</div> }</div>
-        <div className="link-container">
+            {/* <div id="link-title">{user.username && <div className="logged-in">Welcome {user.username.toUpperCase()}</div> }</div> */}
+        {/* <div className="link-container"> */}
         <Link to="users/me" className="links">{token ? 'User Profile' : ''}</Link> 
         <Link to="/messages" className="links">{token ? 'Messages' : ''}</Link>
         <Link to="/addposts" className="links">{token ? 'Create Post' : ''}</Link>
@@ -30,9 +30,9 @@ const Navbar = ({token, setToken, user, setUser}) => {
                 setToken('')
                 setUser({})
             }
-        }}className="links">{token ? 'Log out' : 'Sign in'}</Link>}
+        }}className="links">{token ? 'Log out' : 'Login'}</Link>}
          <Link path to="/" className="links">Home</Link>
-        </div>
+        {/* </div> */}
     </nav>
     }
     </div>

@@ -30,7 +30,9 @@ const GetPosts = ({token, setToken, setUser}) => {
 
           return <>
                 <div className="post-bg">
-                    <h1>Goodies</h1>
+                    <h1>The Good Stuff</h1>
+                    <p>The resale platform with all the vibes</p>
+                    <hr></hr>
                     <div className='post-wrapper'>
             {
             postList.map(post => {
