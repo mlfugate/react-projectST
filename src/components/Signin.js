@@ -1,7 +1,5 @@
 import React, { useState } from 'react';
 import {Link, useHistory} from 'react-router-dom';
-// import {Link, useNavigate} from 'react-router-dom';
-
 import './style/signin.css'
 
 const Signin = ({type, setToken, setUser}) => {
@@ -15,8 +13,6 @@ const Signin = ({type, setToken, setUser}) => {
 
   const handleSubmit = async (event) => {
     event.preventDefault();
-    console.log('username: ', username);
-    console.log('password: ', password);
     const response = await fetch(`https://strangers-things.herokuapp.com/api/2010-CPU-RM-WEB-PT/users/${type}`, {
       method: 'POST',
       headers: {
@@ -30,10 +26,7 @@ const Signin = ({type, setToken, setUser}) => {
       })
     });
     const {data} = await response.json();
-    console.log('data initial', data)
-    console.log('data.token', data.token)
     const token = data.token
-    console.log('token:', token)
     if (token) {
     setToken(token);
     localStorage.setItem('token', token)
@@ -45,7 +38,6 @@ const Signin = ({type, setToken, setUser}) => {
       },
     })
     const {data} = await response.json();
-    console.log("data:", data)
     setUser(data)
     setUsername('');
     setPassword('');

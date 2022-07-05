@@ -1,8 +1,8 @@
 import { Link, useHistory } from 'react-router-dom';
-
-// import { Link, useNavigate } from 'react-router-dom';
-
 import './style/nav.css'
+
+
+
 const Navbar = ({token, setToken, user, setUser}) => {
     const history = useHistory();
     const handleLogout = () => {
@@ -15,12 +15,8 @@ const Navbar = ({token, setToken, user, setUser}) => {
     <div className='nav-container'>
     
         {/* <div id="link-title">Strangers Things {user.username && <div className="logged-in">Welcome {user.username.toUpperCase()}</div> }<div>The Resale Site for Everything</div></div> */}
-        
-        {/* {user.username && <div className="logged-in">Hello {user.username.toUpperCase()}</div> } */}
     {
         <nav className="nav-bar">
-            {/* <div id="link-title">{user.username && <div className="logged-in">Welcome {user.username.toUpperCase()}</div> }</div> */}
-        {/* <div className="link-container"> */}
         <Link to="users/me" className="links">{token ? 'User Profile' : ''}</Link> 
         <Link to="/messages" className="links">{token ? 'Messages' : ''}</Link>
         <Link to="/addposts" className="links">{token ? 'Create Post' : ''}</Link>
@@ -32,7 +28,6 @@ const Navbar = ({token, setToken, user, setUser}) => {
             }
         }}className="links">{token ? 'Log out' : 'Login'}</Link>}
          <Link path to="/" className="links">Home</Link>
-        {/* </div> */}
     </nav>
     }
     </div>
