@@ -52,7 +52,7 @@ const Signin = ({type, setToken, setUser}) => {
         <form onSubmit={handleSubmit} className="signin-form">
           <input type="text"  value={username} onChange={(event) => setUsername(event.target.value)}placeholder="username"></input>
           <input type="password" value={password} onChange={(event) => setPassword(event.target.value)}placeholder="password"></input>
-          <button type="submit" className="button" >{title}</button>
+          <button type="submit" className="button signIN" >{title}</button>
         <Link to={`/${toggleType}`} className="toggle-login">{toggleTitle}</Link>
         </form>
       </div>

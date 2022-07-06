@@ -62,7 +62,7 @@
     letter-spacing: 1px;
 }
 
-.signin-form > button {
+button.signIN {
     color: black;
 }
 
