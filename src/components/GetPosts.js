@@ -40,7 +40,7 @@ const GetPosts = ({token, setToken, setUser}) => {
                 return  (
                     <div className="post-container" key={_id}>
                     <div className="post">
-                        <img src={require('./style/product-300.jpg')}/>
+                        <img src={require('./style/product-300.jpg')} alt="handle bars"/>
                             <h1 className="post-title"><b>{title}</b></h1>
                             <div className="post-description"><b>Description:</b>  {description}</div>
                             <div className="price"><b>Price:</b>  {price}</div>

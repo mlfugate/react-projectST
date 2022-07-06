@@ -31,7 +31,7 @@ const MessageList = ({token, messages, setMessages, user, setUser}) => {
                  return message.fromUser.username !== user ? 
                  <div className="message-list">
                     <div className="messages" key={idx}>
-                    <img src={require('./style/envelope.jpg')}/>
+                    <img src={require('./style/envelope.jpg')}alt="envelope with flowers"/>
                         <p id="inbox-title">Re: {message.post.title}</p>
                         <p>Message: {message.content}</p>
                         <p>From: {message.fromUser.username}</p>
@@ -46,7 +46,7 @@ const MessageList = ({token, messages, setMessages, user, setUser}) => {
                     return  message.fromUser.username == user ? 
                     <div className="message-list">
                         <div className="messages" key={idx}>
-                        <img src={require('./style/envelope.jpg')}/>
+                        <img src={require('./style/envelope.jpg')} alt="envelope with flowers"/>
                             <p id="inbox-title">Re: {message.post.title}</p>
                             <p>Message: {message.content}</p>
                             <p>From: {message.fromUser.username}</p>

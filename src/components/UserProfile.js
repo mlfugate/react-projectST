@@ -31,7 +31,7 @@ const UserProfile = ({token, setUser}) => {
             const {title, price, location, description, _id,  author} = post;
             return  <div className="post-container" key={idx}>
                   <div className="post yourPost">
-                  <img src={require('./style/product-300.jpg')}/>
+                  <img src={require('./style/product-300.jpg')} alt="handle bars"/>
 
                     <div className="post-title"><strong>{title}</strong></div>
                     <div className="post-description"><strong>Description:</strong>  {description}</div>
